@@ -1,0 +1,492 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  line-height: 1.5;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  display: inline-block;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bg-gray {
+  background: #f4f4f8;
+}
+
+.clearFix {
+  clear: both;
+}
+
+.snsLink {
+  float: right;
+}
+
+.snsLink li {
+  float: left;
+}
+
+.snsLink a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+}
+
+.snsLink a:hover {
+  text-decoration: underline;
+}
+
+.fb {
+  color: #4460a0;
+}
+
+.twitter {
+  color: #00aaec;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: 224px;
+  height: 50px;
+  background: no-repeat url(../images/logo.png);
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav li > a {
+  display: block;
+  width: 200px;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  position: relative;
+  color: #00cc99;
+  transition: all 0.3s;
+}
+
+.nav li > a::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  bottom: 5px;
+  left: 50%;
+  right: 50%;
+  background: #00cc99;
+  transition: all 0.3s;
+}
+
+.nav li > a:hover::after {
+  left: 10%;
+  right: 10%;
+}
+
+.nav li > a.active {
+  background: #00cc99;
+  color: #fff;
+}
+
+.dropdown-open {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  background: #fff;
+}
+
+/* .banner {
+  background: center/cover no-repeat url(../images/banner.png);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.banner h2 {
+  font-size: 64px;
+  line-height: 1.5;
+  color: #fff;
+  background: #1d1d1d;
+  flex-grow: 1;
+  padding: 2rem;
+  opacity: 0.96;
+} */
+
+.swiper-container {
+  height: 400px;
+  margin-bottom: 64px;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #00cc99;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #00cc99;
+}
+
+.course {
+  display: flex;
+  justify-content: space-around;
+}
+
+.course-item {
+  width: 350px;
+  padding: 2rem;
+  margin-bottom: 64px;
+  box-shadow: 0px 4px 6px gainsboro;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.course-item:hover {
+  transform: rotateZ(-10deg);
+  transition: all 0.5s;
+}
+
+.course-item a {
+  display: block;
+  height: 100px;
+  margin-bottom: 16px;
+}
+.course-item img {
+  max-width: 100%;
+  height: 100px;
+}
+
+.course-item h3 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.course-item p {
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.course-item ul {
+  list-style: disc;
+  text-align: left;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.comparison {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.comparison h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.comparison table {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.comparison tr {
+  border-top: 1px solid #1d1d1d;
+  border-bottom: 1px solid #1d1d1d;
+  text-align: left;
+}
+
+.comparison th,
+.comparison td {
+  padding: 1rem 0;
+}
+
+.comparison th {
+  background: #f4f6f8;
+  font-weight: 500;
+}
+
+.advantage {
+  color: #00cc99;
+}
+
+.goTop {
+  color: #00cc99;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background: #fff;
+  border: 2px solid #f4f4f8;
+  border-radius: 50%;
+  font-size: 2rem;
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: all 0.3s;
+}
+
+.goTop:hover {
+  background: #00cc99;
+  color: #fff;
+}
+
+form {
+  background: linear-gradient(45deg, #144d48, #007d6d);
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+}
+
+form > label {
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group textarea {
+  width: 48%;
+  resize: none;
+}
+
+.form-group .form-input {
+  width: 48%;
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+}
+
+.form-control {
+  border: 0;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.btn {
+  display: block;
+  background: #00cc99;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
+  padding: 0.5rem 1.25rem;
+  margin-left: auto;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #00cc99;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+footer img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+footer li {
+  display: flex;
+  align-items: center;
+}
+
+footer a {
+  display: block;
+  color: #d54c73;
+}
